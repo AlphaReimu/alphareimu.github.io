@@ -6506,7 +6506,7 @@ body>.sitebg .siteblur:hover {
 .md-text blockquote ol,
 .md-text ul ol,
 .md-text ol ol {
-  --fsp: calc(17px - 0px);
+  --fsp: calc(17px - 1px);
   font-size: var(--fsp);
   line-height: 1.5;
 }
