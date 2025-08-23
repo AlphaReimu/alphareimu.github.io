@@ -45,7 +45,7 @@
   --theme-link: #4535c1;
 }
 :root[data-theme="light"] {
-  --site-bg: #fafafa;
+  --site-bg: #fafafc;
   --card: #fff;
   --block: #f0f1f5;
   --block-border: #e0e4eb;
@@ -66,7 +66,7 @@
   --text-code: #f53900;
 }
 :root[data-theme="dark"] {
-  --site-bg: #1e1e1e;
+  --site-bg: #191920;
   --card: #2e384d;
   --block: #202631;
   --block-border: #30394a;
@@ -92,7 +92,7 @@
   }
 }
 :root:not([data-theme]) {
-  --site-bg: #fafafa;
+  --site-bg: #fafafc;
   --card: #fff;
   --block: #f0f1f5;
   --block-border: #e0e4eb;
@@ -114,7 +114,7 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme]) {
-    --site-bg: #1e1e1e;
+    --site-bg: #191920;
     --card: #2e384d;
     --block: #202631;
     --block-border: #30394a;
@@ -885,7 +885,7 @@ table:not([class]) {
   outline: none;
 }
 html {
-  font-family: Source Han Sans SC VF;
+  font-family: Alibaba PuHuiTi, Source Han Sans SC VF;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -4902,7 +4902,7 @@ details.toc[open] >div.body section .header+.doc_tree {
 .search-wrapper .search-input {
   width: 100%;
   box-sizing: border-box;
-  font-family: Source Han Sans SC VF;
+  font-family: Alibaba PuHuiTi, Source Han Sans SC VF;
   font-size: 0.875rem;
   padding: 12px 0;
   color: var(--text);
