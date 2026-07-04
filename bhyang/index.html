@@ -1,640 +1,246 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="杨博涵的个人主页：大语言模型强化学习、多智能体强化学习与相关项目。">
+    <title>杨博涵 LLM & RL</title>
+    <link rel="icon" href="https://files.seeusercontent.com/2026/07/04/pF3y/icon.jpg">
+    <link rel="preconnect" href="https://fonts.loli.net" crossorigin>
+    <link rel="stylesheet" href="https://fonts.loli.net/css2?family=Noto+Sans+SC:wght@100..900&display=swap">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
 
-<!DOCTYPE html><html lang="en">
+    <header class="site-header" data-elevated="false">
+      <nav class="nav-shell" aria-label="主要导航">
+        <a class="brand" href="#top" aria-label="杨博涵主页">
+          <img class="site-icon" src="https://files.seeusercontent.com/2026/07/04/pF3y/icon.jpg" alt="">
+        </a>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="hexo-theme" content="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1" theme-name="Stellar" theme-version="1.29.1">
-  
-  <meta name="generator" content="Hexo 7.3.0">
-  <meta http-equiv='x-dns-prefetch-control' content='on' />
-  
-  <meta name="renderer" content="webkit">
-  <meta name="force-rendering" content="webkit">
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <meta name="HandheldFriendly" content="True" >
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000">
-  <meta name="theme-color" content="#f9fafb">
-  
-  <title>Bohan Yang - αReimu</title>
-
-  
-    <meta name="description" content="Biography Hello! I am Bo-Han Yang (杨博涵), currently an undergraduate student at School of Artificial Intelligence in Nanjing University. My supervisors are Assistant Researcher Lei Yuan and Professors">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Bohan Yang">
-<meta property="og:url" content="https://alphareimu.github.io/bhyang/index.html">
-<meta property="og:site_name" content="αReimu">
-<meta property="og:description" content="Biography Hello! I am Bo-Han Yang (杨博涵), currently an undergraduate student at School of Artificial Intelligence in Nanjing University. My supervisors are Assistant Researcher Lei Yuan and Professors">
-<meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://s2.loli.net/2025/06/05/d2xFl15uOrKUEzt.png">
-<meta property="og:image" content="https://s2.loli.net/2025/06/05/ygezGMav7WLYQEc.png">
-<meta property="og:image" content="https://s2.loli.net/2025/06/11/6YIL2UfdrcpKQW4.png">
-<meta property="og:image" content="https://s2.loli.net/2025/06/11/EwbkMvctjm5DHpO.png">
-<meta property="article:published_time" content="2025-10-11T07:09:31.103Z">
-<meta property="article:modified_time" content="2025-10-11T07:09:31.103Z">
-<meta property="article:author" content="bhYang">
-<meta property="article:tag" content="AI, RL">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://s2.loli.net/2025/06/05/d2xFl15uOrKUEzt.png">
-  
-  
-  
-  <meta name="keywords" content="AI, RL">
-
-  <!-- feed -->
-  
-
-  <link rel="stylesheet" href="/css/main.css?v=1.29.1">
-
-
-  
-    <link rel="shortcut icon" href="https://s2.loli.net/2025/01/06/aCNKG3mSO465zrx.png">
-  
-
-  
-
-  <link href="https://cdn.jsdelivr.net/npm/@tslsmart/font-puhuiti@1.0.0/index.min.css" rel="stylesheet">
-</head>
-<body>
-
-<div class="l_body s:aa content tech" id="start" layout="page" ><aside class="l_left"><div class="leftbar-container">
-
-
-<div class="widgets">
-<widget class="widget-wrapper markdown"><div class="widget-body fs14"><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2025/08/23/zuvoAIS6O8Tj5ZF.jpg" style="border-radius: 15px; width: 70%; display: block; margin: 0 auto;">
-<center>
-<h1>
-<p><span
-style="font-family: &#39;KaiTi&#39;,&#39;STKaiti&#39;,serif; font-size: 1.2em;">杨博涵<br></span>
-<span
-style="font-family: &#39;KaiTi&#39;,&#39;STKaiti&#39;,serif;">Bo-Han
-Yang</span></p>
-</h1>
-</center>
-<p>Undergraduate student</p>
-<p>School of Artificial Intelligence</p>
-<p>Nanjing University, China</p>
-</div></widget>
-
-<widget class="widget-wrapper linklist"><div class="widget-body fs14">
-<div class="linklist left" style="grid-template-columns:repeat(1,1fr);">
-<a class="link" title="Mail (edu)" href="mailto:yangbh@lamda.nju.edu.cn"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg><span>Mail (edu)</span></div></a>
-<a class="link" title="Mail (gmail)" href="mailto:bhyang.rl@gmail.com"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"/></svg><span>Mail (gmail)</span></div></a>
-<a class="link" title="Github" target="_blank" rel="noopener" href="https://github.com/AlphaReimu"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg><span>Github</span></div></a>
-<a class="link" title="Google Scholar" target="_blank" rel="noopener" href="https://scholar.google.com/citations?user=guqess0AAAAJ"><div class="flex"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M390.9 298.5c0 0 0 .1 .1 .1c9.2 19.4 14.4 41.1 14.4 64C405.3 445.1 338.5 512 256 512s-149.3-66.9-149.3-149.3c0-22.9 5.2-44.6 14.4-64h0c1.7-3.6 3.6-7.2 5.6-10.7c4.4-7.6 9.4-14.7 15-21.3c27.4-32.6 68.5-53.3 114.4-53.3c33.6 0 64.6 11.1 89.6 29.9c9.1 6.9 17.4 14.7 24.8 23.5c5.6 6.6 10.6 13.8 15 21.3c2 3.4 3.8 7 5.5 10.5zm26.4-18.8c-30.1-58.4-91-98.4-161.3-98.4s-131.2 40-161.3 98.4L0 202.7 256 0 512 202.7l-94.7 77.1z"/></svg><span>Google Scholar</span></div></a></div></div></widget>
-</div>
-
-</div></aside><div class="l_main" id="main">
-
-
-
-
-
-<article class="md-text content"><h2 id="biography">Biography</h2>
-<p>Hello! I am Bo-Han Yang (杨博涵), currently an undergraduate student
-at <a target="_blank" rel="noopener" href="https://ai.nju.edu.cn/">School of Artificial
-Intelligence</a> in <a target="_blank" rel="noopener" href="https://www.nju.edu.cn/">Nanjing
-University</a>. My supervisors are Assistant Researcher <a
-target="_blank" rel="noopener" href="https://www.lamda.nju.edu.cn/yuanl/">Lei Yuan</a> and Professors
-<a target="_blank" rel="noopener" href="https://www.wolai.com/eyounx/dtR1MTyRXS5tP5Cex4KtdK">Yang
-Yu</a>, and I am also a member of the <a
-target="_blank" rel="noopener" href="https://www.lamda.nju.edu.cn/">LAMDA Group</a> led by Professor <a
-target="_blank" rel="noopener" href="http://cs.nju.edu.cn/zhouzh/">Zhi-Hua Zhou</a>.</p>
-<p>My research interests include reinforcement learning, such as offline
-reinforcement learning, reinforcement learning training for large
-language models, and multi-agent reinforcement learning.</p>
-<h2 id="publications">Publications</h2>
-<p>* indicates equal contribution</p>
-<div class="tag-plugin grid" first="32%" style="grid-template-columns: 32% repeat(1, 1fr);grid-gap:8px;"><div class="cell" style="display:flex; flex-direction:column; justify-content:center; ">
-        <div class="tag-plugin image"> <div class="image-bg"> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2025/06/05/d2xFl15uOrKUEzt.png" data-fancybox="true"/><a class="image-download blur" style="opacity:0" target="_blank" href="https://s2.loli.net/2025/06/05/d2xFl15uOrKUEzt.png"><svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3734"><path d="M561.00682908 685.55838913a111.03077546 111.03077546 0 0 1-106.8895062 0L256.23182837 487.72885783a55.96309219 55.96309219 0 0 1 79.13181253-79.18777574L450.70357448 523.88101491V181.55477937a55.96309219 55.96309219 0 0 1 111.92618438 0v344.06109173l117.07478902-117.07478901a55.96309219 55.96309219 0 0 1 79.13181252 79.18777574zM282.81429711 797.1487951h447.70473912a55.96309219 55.96309219 0 0 1 0 111.92618438H282.81429711a55.96309219 55.96309219 0 0 1 0-111.92618438z" p-id="3735"></path></svg></a> </div> </div> 
+        <div class="nav-links" aria-label="页面章节">
+          <a href="#bio">简介</a>
+          <a href="#research">科研</a>
+          <a href="#projects">项目</a>
+          <a href="#awards">奖项</a>
+          <a href="#misc">其他</a>
         </div>
-<div class="cell" style="">
-        <p><strong>Learning to Reuse Policies in State Evolvable Environments</strong> <a target="_blank" rel="noopener" href="https://openreview.net/pdf?id=1R84O2Xr1k">[paper]</a><a target="_blank" rel="noopener" href="https://github.com/zzq-bot/Lapse">[code]</a><a target="_blank" rel="noopener" href="https://icml.cc/virtual/2025/poster/46639">[poster]</a></p> <p>Ziqian Zhang*, <strong>Bohan Yang</strong>*, Lihe Li, Yuqi Bian, Ruiqi Xue, Feng Chen, Yi-Chen Li, Lei Yuan, Yang Yu</p> <p>The 42nd International Conference on Machine Learning <a class="tag-plugin colorful hashtag" color="purple" target="_blank" rel="noopener" href="https://icml.cc/Conferences/2025"><svg t="1701408144765" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4228" width="200" height="200"><path d="M426.6 64.8c34.8 5.8 58.4 38.8 52.6 73.6l-19.6 117.6h190.2l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6s58.4 38.8 52.6 73.6l-19.4 117.6H896c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-42.6 256H832c35.4 0 64 28.6 64 64s-28.6 64-64 64h-137.8l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.6-117.4h-190.4l-23 138.6c-5.8 34.8-38.8 58.4-73.6 52.6s-58.4-38.8-52.6-73.6l19.4-117.8H128c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l42.6-256H192c-35.4 0-64-28.6-64-64s28.6-64 64-64h137.8l23-138.6c5.8-34.8 38.8-58.4 73.6-52.6z m11.6 319.2l-42.6 256h190.2l42.6-256h-190.2z" p-id="4229"></path></svg><span>ICML 2025</span></a></p> <div style="text-align: justify;"> We addresse the performance degradation of RL policies when state features (e.g., sensor data) evolve unpredictably by proposing Lapse, a method that reuses old policies by combining them with a state reconstruction model for vanished sensors and leverages past policy experience for offline training of new policies. </div> 
+
+        <button class="theme-toggle" type="button" aria-label="切换颜色主题" aria-pressed="false">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path d="M12 3v2.5M12 18.5V21M4.22 4.22l1.77 1.77M18.01 18.01l1.77 1.77M3 12h2.5M18.5 12H21M4.22 19.78l1.77-1.77M18.01 5.99l1.77-1.77"></path>
+            <circle cx="12" cy="12" r="4.25"></circle>
+          </svg>
+          <span>主题</span>
+        </button>
+      </nav>
+    </header>
+
+    <main id="main" class="page-shell">
+      <aside class="profile-sidebar" id="top" aria-labelledby="profile-name">
+        <div class="profile-card reveal">
+          <img class="avatar" src="https://files.seeusercontent.com/2026/07/04/maT0/yangbh.jpg" alt="杨博涵头像">
+          <div class="profile-heading">
+            <h1 id="profile-name">杨博涵</h1>
+          </div>
+
+          <img class="affiliation-logo" src="https://files.seeusercontent.com/2026/07/04/2Abx/logo.png" alt="南京大学与 LAMDA RL LAB 标识" loading="lazy">
+
+          <ul class="profile-lines" aria-label="基本信息">
+            <li>南京大学</li>
+            <li>人工智能学院</li>
+            <li>LAMDA RL LAB</li>
+            <li>大语言模型强化学习</li>
+            <li>多智能体强化学习</li>
+          </ul>
+
+          <div class="contact-list" aria-label="相关链接">
+            <a href="mailto:yangbh@lamda.nju.edu.cn">Mail</a>
+            <a href="https://github.com/AlphaReimu" target="_blank" rel="noopener">GitHub</a>
+            <a href="https://scholar.google.com/citations?user=guqess0AAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+          </div>
         </div>
-</div>
-<div class="tag-plugin grid" first="32%" style="grid-template-columns: 32% repeat(1, 1fr);grid-gap:8px;"><div class="cell" style="display:flex; flex-direction:column; justify-content:center; ">
-        <div class="tag-plugin image"> <div class="image-bg"> <img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2025/06/05/ygezGMav7WLYQEc.png" data-fancybox="true"/><a class="image-download blur" style="opacity:0" target="_blank" href="https://s2.loli.net/2025/06/05/ygezGMav7WLYQEc.png"><svg class="icon" style="width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3734"><path d="M561.00682908 685.55838913a111.03077546 111.03077546 0 0 1-106.8895062 0L256.23182837 487.72885783a55.96309219 55.96309219 0 0 1 79.13181253-79.18777574L450.70357448 523.88101491V181.55477937a55.96309219 55.96309219 0 0 1 111.92618438 0v344.06109173l117.07478902-117.07478901a55.96309219 55.96309219 0 0 1 79.13181252 79.18777574zM282.81429711 797.1487951h447.70473912a55.96309219 55.96309219 0 0 1 0 111.92618438H282.81429711a55.96309219 55.96309219 0 0 1 0-111.92618438z" p-id="3735"></path></svg></a> </div> </div> 
-        </div>
-<div class="cell" style="">
-        <p><strong>Generalizable Offline Multi-Agent Reinforcement Learning with Flexible Skill Modulations Retrieval</strong></p> <p>Lei Yuan, <strong>Bohan Yang</strong>, Ziqian Zhang, Lihe Li, Yang Yu</p> <p>Under review at IEEE Transactions on Pattern Analysis and Machine Intelligence (TPAMI)</p> <div style="text-align: justify;"> We propose GOMAS, a transformer-based framework for multi-task offline multi-agent reinforcement learning. It includes a pre-trained encoder for task-agnostic representations and a skill modulation mechanism to handle action diversity. GOMAS is evaluated across multiple benchmarks, showing effective learning and generalization in multi-agent environments. </div> 
-        </div>
-</div>
-<h2 id="awards-honors">Awards &amp; Honors</h2>
-<ul>
-<li><p>2025.6 Outstanding Graduate of Nanjing University
-(南京大学优秀毕业生)</p></li>
-<li><p>2025.5 <strong>Special Award</strong> of the UbiPoker AI Contest.
-$5,000 CNY (九坤德州扑克AI对抗赛特色奖)</p></li>
-<li><p>2024.12 Yang Lanyun Leadership-Oriented Talent Scholarship,
-$5,000 CNY (杨蓝云领导型人才奖学金)</p></li>
-<li><p>2024.11 <strong>Grand Prize</strong> of the Challenge Cup
-<em>Leaderboard Challenge</em> Special Competition
-(“挑战杯”揭榜挂帅专项赛特等奖)</p></li>
-<li><p>2024.5 <strong>Grand Prize</strong> of the Jiangsu Collegiate
-Computing Competition (江苏省计算机设计大赛特等奖)</p></li>
-<li><p>2024.3 Research &amp; Competition Star of the School of
-Artificial Intelligence, Nanjing University, $2,000 CNY
-(南京大学人工智能学院科研竞赛之星)</p></li>
-<li><p>2023.10 <strong>Champion</strong> of the E Fund Cup <em>AI+</em>
-Collegiate Innovation Competition, $10,000 CNY
-(易方达资产杯“AI+”大学生创新技能挑战赛第一名)</p></li>
-<li><p>2019.12 <strong>First Prize</strong> of the National Olympiad in
-Informatics in Provinces (NOIP 吉林省一等奖)</p></li>
-</ul>
-<h2 id="miscellaneous">Miscellaneous</h2>
-<ul>
-<li><p>I am a fan of Touhou Project doujin music, and I also really
-enjoy trance, especially uplifting trance. Perhaps we have something in
-common!</p></li>
-<li><p>I built and deployed the <a
-target="_blank" rel="noopener" href="https://lamda-rl.nju.edu.cn/">LAMDA RL LAB homepage</a> based on
-VitePress and Tailwind CSS.</p></li>
-</ul>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2025/06/11/6YIL2UfdrcpKQW4.png" style="width: 35%;"></p>
-<ul>
-<li>I designed the emblem for Kai Jia College of Nanjing University. Kai
-Jia College is a freshman college for the computer science discipline at
-Nanjing University.</li>
-</ul>
-<p><img class="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAABGdBTUEAALGPC/xhBQAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAAaADAAQAAAABAAAAAQAAAADa6r/EAAAAC0lEQVQIHWNgAAIAAAUAAY27m/MAAAAASUVORK5CYII=" data-src="https://s2.loli.net/2025/06/11/EwbkMvctjm5DHpO.png" style="width: 35%;"></p>
-</article>
+      </aside>
 
+      <div class="content-flow">
+        <section class="content-section reveal" id="bio" aria-label="简介">
+          <div class="prose">
+            <p>我是杨博涵，目前是南京大学<a href="https://ai.nju.edu.cn/" target="_blank" rel="noopener">人工智能学院</a>的一年级硕士。</p>
+            <p>我的导师是<a href="https://www.wolai.com/eyounx/dtR1MTyRXS5tP5Cex4KtdK" target="_blank" rel="noopener">俞扬</a>教授和<a href="https://www.lamda.nju.edu.cn/yuanl/" target="_blank" rel="noopener">袁雷</a>研究员，我也是<a href="http://cs.nju.edu.cn/zhouzh/" target="_blank" rel="noopener">周志华</a>教授领导的 <a href="https://www.lamda.nju.edu.cn/" target="_blank" rel="noopener">LAMDA</a> 研究组的一员。在这之前，我的本科也毕业于南京大学人工智能学院。由于 RL 实在是太有趣了，我在大二时就申请加入了俞扬教授负责的 <a href="https://lamda-rl.nju.edu.cn/" target="_blank" rel="noopener">LAMDA RL LAB</a>。</p>
+            <p>我的研究兴趣是大语言模型强化学习、多智能体强化学习。</p>
+          </div>
+        </section>
 
+        <section class="content-section reveal" id="research" aria-labelledby="research-title">
+          <div class="section-heading with-note">
+            <div>
+              <h2 id="research-title">科研探索</h2>
+            </div>
+            <p class="section-note">* 表示相同贡献</p>
+          </div>
 
-<footer class="page-footer footnote"><hr><div class="text"><p>Template courtesy: <a
-target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.29.1">Stellar
-1.29.1</a></p>
-</div></footer>
-<div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
-<div class="widgets">
+          <div class="publication-list">
+            <article class="publication-item">
+              <a class="paper-thumb" href="https://files.seeusercontent.com/2026/07/04/G7sn/ReVal.jpg" target="_blank" rel="noopener" aria-label="查看 ReVal 方法示意图">
+                <img src="https://files.seeusercontent.com/2026/07/04/G7sn/ReVal.jpg" alt="ReVal 方法示意图" loading="lazy">
+              </a>
+              <div class="paper-body">
+                <p class="venue">ArXiv 预印本</p>
+                <h3>Off-Policy Value-Based Reinforcement Learning for Large Language Models</h3>
+                <p class="authors">Peng-Yuan Wang*, Ziniu Li*, Tian Xu*, <strong>Bohan Yang</strong>, Tian-Shuo Liu, ChenYang Wang, Xiong-Hui Chen, Yi-Chen Li, Tianyun Yang, Congliang Chen, Yang Yu</p>
+                <p>现在 LLM RL 训练的 rollout 越来越重型，这让提高数据利用效率变得更加重要。然而目前的主流方法对数据 on policy 程度的要求一般比较严格，新鲜度较低、训推不一致都有可能明显影响训练的稳定性。我们探索了一种面向 LLM 的 value-base 方法，这个方法不对训练数据分布做出假设，能高效复用 off policy 的数据。在数学推理上的实验表明我们的方法在收敛速度和收敛性能上相比 GRPO 等方法呈现一定优势。</p>
+                <div class="paper-links" aria-label="论文链接">
+                  <a href="https://arxiv.org/abs/2603.23355" target="_blank" rel="noopener">文章</a>
+                </div>
+              </div>
+            </article>
 
-<widget class="widget-wrapper toc" id="data-toc" collapse="false"><div class="widget-header dis-select"><span class="name">On This Page</span><a class="cap-action" onclick="sidebar.toggleTOC()" ><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg></a></div><div class="widget-body"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#biography"><span class="toc-text">Biography</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#publications"><span class="toc-text">Publications</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#awards-honors"><span class="toc-text">Awards &amp; Honors</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#miscellaneous"><span class="toc-text">Miscellaneous</span></a></li></ol></div><div class="widget-footer">
+            <article class="publication-item">
+              <a class="paper-thumb" href="https://files.seeusercontent.com/2026/07/04/3qpO/EndoRM.jpg" target="_blank" rel="noopener" aria-label="查看 EndoRM 方法示意图">
+                <img src="https://files.seeusercontent.com/2026/07/04/3qpO/EndoRM.jpg" alt="EndoRM 方法示意图" loading="lazy">
+              </a>
+              <div class="paper-body">
+                <p class="venue muted">投稿至 nature machine intelligence</p>
+                <h3>Generalist Reward Model Found inside Large Language Model Provably Enables Self-improvement</h3>
+                <p class="authors">Yi-Chen Li*, Tian Xu*, Yang Yu*, <strong>Bohan Yang</strong>, Xuqin Zhang, Xiong-Hui Chen, Zhenru Zhang, Lei Yuan, Bowen Yu, Junyang Lin, Zhi-Hua Zhou</p>
+                <p>神奇的是 LLM 的自监督训练目标和逆强化学习目标居然是一致的，这意味着任何经过预训练的 LLM  都隐含着一个由训练数据集导出的 reward model，我们可以通过「内生奖励」引导出训练过程中所见的知识，而且这种奖励表现出很强的指令遵循能力，因而更加通用。这样的内生奖励有丰富多样的用法，例如我们可以通过强化学习，让 LLM 在自己的内生奖励的基础上学习更加远视的规划能力，在不引入外部信号的情况下提升推理的表现。</p>
+              </div>
+            </article>
 
-<a class="top" onclick="util.scrollTop()"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 12c0-4.714 0-7.071 1.464-8.536C4.93 2 7.286 2 12 2c4.714 0 7.071 0 8.535 1.464C22 4.93 22 7.286 22 12c0 4.714 0 7.071-1.465 8.535C19.072 22 16.714 22 12 22s-7.071 0-8.536-1.465C2 19.072 2 16.714 2 12Z"/><path stroke-linecap="round" stroke-linejoin="round" d="m9 15.5l3-3l3 3m-6-4l3-3l3 3"/></g></svg><span>Scroll to Top</span></a></div></widget>
-</div></aside><div class='float-panel blur'>
-  <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
-  </button>
-  <button type='button' style='display:none' class='mobile-only leftbar-toggle mobile' onclick='sidebar.leftbar()'>
-    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.5"><path d="M2 11c0-3.771 0-5.657 1.172-6.828C4.343 3 6.229 3 10 3h4c3.771 0 5.657 0 6.828 1.172C22 5.343 22 7.229 22 11v2c0 3.771 0 5.657-1.172 6.828C19.657 21 17.771 21 14 21h-4c-3.771 0-5.657 0-6.828-1.172C2 18.657 2 16.771 2 13z"/><path id="sep" stroke-linecap="round" d="M5.5 10h6m-5 4h4m4.5 7V3"/></g></svg>
-  </button>
-</div>
-</div><div class="scripts">
-<script type="text/javascript">
-  const ctx = {
-    date_suffix: {
-      just: `Just`,
-      min: `minutes ago`,
-      hour: `hours ago`,
-      day: `days ago`,
-    },
-    root : `/`,
-  };
+            <article class="publication-item">
+              <a class="paper-thumb" href="https://files.seeusercontent.com/2026/07/04/bLw0/Lapse.jpg" target="_blank" rel="noopener" aria-label="查看 Lapse 方法示意图">
+                <img src="https://files.seeusercontent.com/2026/07/04/bLw0/Lapse.jpg" alt="Lapse 方法示意图" loading="lazy">
+              </a>
+              <div class="paper-body">
+                <p class="venue">ICML 2025</p>
+                <h3>Learning to Reuse Policies in State Evolvable Environments</h3>
+                <p class="authors">Ziqian Zhang*, <strong>Bohan Yang*</strong>, Lihe Li, Yuqi Bian, Ruiqi Xue, Feng Chen, Yi-Chen Li, Lei Yuan, Yang Yu</p>
+                <p>一个历经千辛万苦训练好的 RL 策略，在观测环境的方式发生变动时（例如传感器的老化，摄像头的转动，API 接口的调整等），其性能往往会显著下降，我们通过自动集成两种互补的策略复用方式，将现有策略的知识高效蒸馏到新的策略中。我们在离散游戏环境 Atari 和连续控制环境 Mujoco 中的实验表明我们的方法能显著缓解观测空间变化导致的性能下降，整体指标达到了最好基线的二倍。</p>
+                <div class="paper-links" aria-label="论文链接">
+                  <a href="https://openreview.net/pdf?id=1R84O2Xr1k" target="_blank" rel="noopener">文章</a>
+                  <a href="https://github.com/zzq-bot/Lapse" target="_blank" rel="noopener">代码</a>
+                  <a href="https://icml.cc/virtual/2025/poster/4663" target="_blank" rel="noopener">海报</a>
+                </div>
+              </div>
+            </article>
 
-  // required plugins (only load if needs)
-  if (`local_search`) {
-    ctx.search = {};
-    ctx.search.service = `local_search`;
-    if (ctx.search.service == 'local_search') {
-      let service_obj = Object.assign({}, `{"field":"all","path":"/search.json","content":true,"skip_search":null,"sort":"-date"}`);
-      ctx.search[ctx.search.service] = service_obj;
-    }
-  }
-  const def = {
-    avatar: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/3442075.svg`,
-    cover: `https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/cover/76b86c0226ffd.svg`,
-  };
-  const deps = {
-    jquery: `https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js`,
-    marked: `https://cdn.jsdelivr.net/npm/marked@13.0.1/lib/marked.umd.min.js`
-  }
-  
+            <article class="publication-item">
+              <a class="paper-thumb" href="https://files.seeusercontent.com/2026/07/04/to3T/GOMAS.jpg" target="_blank" rel="noopener" aria-label="查看 GOMAS 方法示意图">
+                <img src="https://files.seeusercontent.com/2026/07/04/to3T/GOMAS.jpg" alt="GOMAS 方法示意图" loading="lazy">
+              </a>
+              <div class="paper-body">
+                <p class="venue muted">投稿至 TPAMI，审稿中</p>
+                <h3>Generalizable Offline Multi-Agent Reinforcement Learning with Flexible Skill Modulations Retrieval</h3>
+                <p class="authors">Lei Yuan, <strong>Bohan Yang</strong>, Ziqian Zhang, Lihe Li, Yang Yu</p>
+                <p>多智能体决策对模型的泛化性提出更高的挑战。以星际争霸微操战局为例，敌我阵营规模与构成纷繁多样，端到端学习的覆盖程度有限。我们发现不同任务的解实际上是同一套 skills 的不同组合方式，因此我们设计了一套 LoRA Adapter 的自动训练与检索机制，让 Agent 能够自行选配合适的 skill 打出精彩配合。我们在星际争霸微操环境 SMAC 中的实验表明我们的方法在训练任务上和未见任务上都表现出性能优势。</p>
+              </div>
+            </article>
+          </div>
+        </section>
 
-</script>
+        <section class="content-section reveal" id="projects" aria-labelledby="projects-title">
+          <div class="section-heading">
+            <h2 id="projects-title">有趣项目</h2>
+          </div>
 
-<script type="text/javascript">
-  const utils = {
-    // 懒加载 css https://github.com/filamentgroup/loadCSS
-    css: (href, before, media, attributes) => {
-      var doc = window.document;
-      var ss = doc.createElement("link");
-      var ref;
-      if (before) {
-        ref = before;
-      } else {
-        var refs = (doc.body || doc.getElementsByTagName("head")[0]).childNodes;
-        ref = refs[refs.length - 1];
-      }
-      var sheets = doc.styleSheets;
-      if (attributes) {
-        for (var attributeName in attributes) {
-          if (attributes.hasOwnProperty(attributeName)) {
-            ss.setAttribute(attributeName, attributes[attributeName]);
-          }
-        }
-      }
-      ss.rel = "stylesheet";
-      ss.href = href;
-      ss.media = "only x";
-      function ready(cb) {
-        if (doc.body) {
-          return cb();
-        }
-        setTimeout(function () {
-          ready(cb);
-        });
-      }
-      ready(function () {
-        ref.parentNode.insertBefore(ss, before ? ref : ref.nextSibling);
-      });
-      var onloadcssdefined = function (cb) {
-        var resolvedHref = ss.href;
-        var i = sheets.length;
-        while (i--) {
-          if (sheets[i].href === resolvedHref) {
-            return cb();
-          }
-        }
-        setTimeout(function () {
-          onloadcssdefined(cb);
-        });
-      };
-      function loadCB() {
-        if (ss.addEventListener) {
-          ss.removeEventListener("load", loadCB);
-        }
-        ss.media = media || "all";
-      }
-      if (ss.addEventListener) {
-        ss.addEventListener("load", loadCB);
-      }
-      ss.onloadcssdefined = onloadcssdefined;
-      onloadcssdefined(loadCB);
-      return ss;
-    },
+          <div class="publication-list">
+            <article class="publication-item">
+              <a class="paper-thumb" href="https://files.seeusercontent.com/2026/07/04/2Uld/infra.jpg" target="_blank" rel="noopener" aria-label="查看 LLM 推理调度方案配图">
+                <img src="https://files.seeusercontent.com/2026/07/04/2Uld/infra.jpg" alt="LLM 推理调度方案配图" loading="lazy">
+              </a>
+              <div class="paper-body">
+                <p class="venue muted">九坤 infra 挑战赛特色方案奖</p>
+                <h3>平衡吞吐量和时延的 LLM 推理调度方案</h3>
+                <p>吞吐量是时延是 LLM 推理引擎的两大关键指标。对于一大批请求，我们设计了一种尽可能多的在规定时限内完成推理的调度策略。我们通过维护统计量来判断一个请求是否是不可能完成的，对于我们认为可做的请求，通过给 SGLang 添加分层的优先级调度方案来允许快要到期的请求插队，并且打断那些已经过期的请求。此外我们分别维护 prefill 和 decode 等待队列，避免 decode 请求被持续到来的 prefill 请求饿死。</p>
+              </div>
+            </article>
 
-    js: (src, opt) => new Promise((resolve, reject) => {
-      var script = document.createElement('script');
-      if (src.startsWith('/')){
-        src = ctx.root + src.substring(1);
-      }
-      script.src = src;
-      if (opt) {
-        for (let key of Object.keys(opt)) {
-          script[key] = opt[key]
-        }
-      } else {
-        // 默认异步，如果需要同步，第二个参数传入 {} 即可
-        script.async = true
-      }
-      script.onerror = reject
-      script.onload = script.onreadystatechange = function() {
-        const loadState = this.readyState
-        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
-        script.onload = script.onreadystatechange = null
-        resolve()
-      }
-      document.head.appendChild(script)
-    }),
+            <article class="publication-item">
+              <a class="paper-thumb" href="https://files.seeusercontent.com/2026/07/04/7egM/poker.jpg" target="_blank" rel="noopener" aria-label="查看德州扑克 Agent 项目配图">
+                <img src="https://files.seeusercontent.com/2026/07/04/7egM/poker.jpg" alt="德州扑克 Agent 项目配图" loading="lazy">
+              </a>
+              <div class="paper-body">
+                <p class="venue muted">九坤 Poker AI 挑战赛特色方案奖</p>
+                <h3>德州扑克 Agent</h3>
+                <p>六人桌德州扑克目前尚且没有成熟的基于 RL 的方案。我们构造了德州扑克 gym 环境，使用 Ray 实现了一个多种群博弈训练方案，不同的训练进程会不断为策略池贡献新的策略，一个排位系统通过优胜劣汰维护策略池，为了避免固定的策略被剥削，通过 UCB 算法来动态选择最合适的策略。</p>
+              </div>
+            </article>
 
-    jq: (fn) => {
-      if (typeof jQuery === 'undefined') {
-        utils.js(deps.jquery).then(fn)
-      } else {
-        fn()
-      }
-    },
-    
-    onLoading: (el) => {
-      if (el) {
-        $(el).append('<div class="loading-wrap"><svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" stroke-opacity=".3" d="M12 3C16.9706 3 21 7.02944 21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="1.3s" values="60;0"/></path><path stroke-dasharray="15" stroke-dashoffset="15" d="M12 3C16.9706 3 21 7.02944 21 12"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.3s" values="15;0"/><animateTransform attributeName="transform" dur="1.5s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></path></g></svg></div>');
-      }
-    },
-    onLoadSuccess: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap').remove();
-      }
-    },
-    onLoadFailure: (el) => {
-      if (el) {
-        $(el).find('.loading-wrap svg').remove();
-        $(el).find('.loading-wrap').append('<svg xmlns="http://www.w3.org/2000/svg" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path stroke-dasharray="60" stroke-dashoffset="60" d="M12 3L21 20H3L12 3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="60;0"/></path><path stroke-dasharray="6" stroke-dashoffset="6" d="M12 10V14"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.6s" dur="0.2s" values="6;0"/></path></g><circle cx="12" cy="17" r="1" fill="currentColor" fill-opacity="0"><animate fill="freeze" attributeName="fill-opacity" begin="0.8s" dur="0.4s" values="0;1"/></circle></svg>');
-        $(el).find('.loading-wrap').addClass('error');
-      }
-    },
-    request: (el, url, callback, onFailure) => {
-      let retryTimes = 3;
-      utils.onLoading(el);
-      function req() {
-        return new Promise((resolve, reject) => {
-          let status = 0; // 0 等待 1 完成 2 超时
-          let timer = setTimeout(() => {
-            if (status === 0) {
-              status = 2;
-              timer = null;
-              reject('请求超时');
-              if (retryTimes == 0) {
-                onFailure();
-              }
-            }
-          }, 5000);
-          fetch(url).then(function(response) {
-            if (status !== 2) {
-              clearTimeout(timer);
-              resolve(response);
-              timer = null;
-              status = 1;
-            }
-            if (response.ok) {
-              return response.json();
-            }
-            throw new Error('Network response was not ok.');
-          }).then(function(data) {
-            retryTimes = 0;
-            utils.onLoadSuccess(el);
-            callback(data);
-          }).catch(function(error) {
-            if (retryTimes > 0) {
-              retryTimes -= 1;
-              setTimeout(() => {
-                req();
-              }, 5000);
-            } else {
-              utils.onLoadFailure(el);
-              onFailure();
-            }
-          });
-        });
-      }
-      req();
-    },
-  };
-</script>
+            <article class="publication-item">
+              <a class="paper-thumb" href="https://files.seeusercontent.com/2026/07/04/s9Qd/taiozhan.jpg" target="_blank" rel="noopener" aria-label="查看分布式 RL 训练框架项目配图">
+                <img src="https://files.seeusercontent.com/2026/07/04/s9Qd/taiozhan.jpg" alt="分布式 RL 训练框架项目配图" loading="lazy">
+              </a>
+              <div class="paper-body">
+                <p class="venue muted">挑战杯揭榜挂帅全国特等奖 · 学生一作专利</p>
+                <h3>为重型 rollout 环境设计的分布式 RL 训练框架</h3>
+                <p>比赛围绕空战仿真环境展开，这个环境严格实时，导致一条轨迹的 rollout 长度可能从几十秒到数十分钟不等，同步的 rollout 会导致大量空闲。我们设计了一种理论上不会产生气泡的 rollout 机制，cpu 节点持续跑满环境并发，集齐一个 batch 就进行一次策略更新，与此同时 rollout 不会暂停，而是在策略更新同步参数后继续进行。</p>
+              </div>
+            </article>
 
-<script>
-  const sidebar = {
-    leftbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    rightbar: () => {
-      if (l_body) {
-        l_body.toggleAttribute('rightbar');
-        l_body.removeAttribute('leftbar');
-      }
-    },
-    dismiss: () => {
-      if (l_body) {
-        l_body.removeAttribute('leftbar');
-        l_body.removeAttribute('rightbar');
-      }
-    },
-    toggleTOC: () => {
-      document.querySelector('#data-toc').classList.toggle('collapse');
-    }
-  }
-</script>
-<script type="text/javascript">
-  (() => {
-    const tagSwitchers = document.querySelectorAll('.tag-subtree.parent-tag > a > .tag-switcher-wrapper')
-    for (const tagSwitcher of tagSwitchers) {
-      tagSwitcher.addEventListener('click', (e) => {
-        const parent = e.target.closest('.tag-subtree.parent-tag')
-        parent.classList.toggle('expanded')
-        e.preventDefault()
-      })
-    }
+            <article class="publication-item">
+              <a class="paper-thumb" href="https://files.seeusercontent.com/2026/07/04/G9ic/nanoMusic.jpg" target="_blank" rel="noopener" aria-label="查看音乐生成模型项目配图">
+                <img src="https://files.seeusercontent.com/2026/07/04/G9ic/nanoMusic.jpg" alt="音乐生成模型项目配图" loading="lazy">
+              </a>
+              <div class="paper-body">
+                <p class="venue muted">易方达资产杯“AI+”第一名 · 江苏省计算机设计大赛特等奖</p>
+                <h3>从零训练音乐生成模型</h3>
+                <p>音乐 midi 乐谱可以离散化为 token 序列，因此我们直接收集数据训练一个 nano-GPT 用于乐谱生成，不过我们发现这样的生成效果不佳，不像人类作品，为此我们引入了 GAN 的训练流程，通过轨迹末尾的一个 CLS token 来让生成模型直接充当判别器，主观测评显示对抗训练明显提升了音乐生成效果。</p>
+              </div>
+            </article>
+          </div>
+        </section>
 
-    // Get active tag from query string, then activate it.
-    const urlParams = new URLSearchParams(window.location.search)
-    const activeTag = urlParams.get('tag')
-    if (activeTag) {
-      let tag = document.querySelector(`.tag-subtree[data-tag="${activeTag}"]`)
-      if (tag) {
-        tag.querySelector('a').classList.add('active')
-        
-        while (tag) {
-          tag.classList.add('expanded')
-          tag = tag.parentElement.closest('.tag-subtree.parent-tag')
-        }
-      }
-    }
-  })()
-</script>
+        <section class="content-section reveal" id="awards" aria-labelledby="awards-title">
+          <div class="section-heading">
+            <h2 id="awards-title">其他奖项</h2>
+          </div>
 
+          <ol class="award-list">
+            <li><time datetime="2025-06">2025.6</time><span>南京大学优秀本科毕业生</span></li>
+            <li><time datetime="2024-12">2024.12</time><span>杨蓝云领导型人才奖学金</span></li>
+            <li><time datetime="2024-03">2024.3</time><span>南京大学人工智能学院科研竞赛之星奖学金</span></li>
+            <li><time datetime="2019-12">2019.12</time><span>NOIP 吉林省一等奖</span></li>
+          </ol>
+        </section>
 
-<!-- required -->
-<script src="/js/main.js?v=1.29.1" defer></script>
+        <section class="content-section reveal" id="misc" aria-labelledby="misc-title">
+          <div class="section-heading">
+            <h2 id="misc-title">其他</h2>
+          </div>
 
-<script type="text/javascript">
-  const applyTheme = (theme) => {
-    if (theme === 'auto') {
-      document.documentElement.removeAttribute('data-theme')
-    } else {
-      document.documentElement.setAttribute('data-theme', theme)
-    }
+          <div class="misc-list">
+            <article class="misc-item">
+              <h3>音乐</h3>
+              <p>我最喜欢 Trance 音乐风格，比如 Hiroyuki ODA，Bernis，Taishi 等。此外我平时还会听一些 Vocaloid，我也喜欢东方 Project 的同人音乐作品。</p>
+            </article>
 
-    applyThemeToGiscus(theme)
-  }
+            <article class="misc-item">
+              <h3>游戏</h3>
+              <p>我最喜欢的游戏是守望先锋，你可以在国服通过「深度强化学习#5544」找到我。在这之前我还玩过英雄联盟、彩虹六号、命运二。如果有一天几个 Agent 能够在不看攻略的情况下通关命运二的任何一个 raid，也许 AGI 就到来了。</p>
+            </article>
 
-  const applyThemeToGiscus = (theme) => {
-    theme = theme === 'auto' ? 'preferred_color_scheme' : theme
+            <article class="misc-item media-item">
+              <img src="https://s2.loli.net/2025/06/11/6YIL2UfdrcpKQW4.png" alt="LAMDA RL LAB 主页预览" loading="lazy">
+              <div>
+                <h3>LAMDA RL LAB 主页</h3>
+                <p>我基于 VitePress 和 Tailwind CSS 开发了 <a href="https://lamda-rl.nju.edu.cn/" target="_blank" rel="noopener">LAMDA RL LAB</a> 的主页。</p>
+              </div>
+            </article>
 
-    const cmt = document.getElementById('giscus')
-    if (cmt) {
-      // This works before giscus load.
-      cmt.setAttribute('data-theme', theme)
-    }
+            <article class="misc-item media-item">
+              <img src="https://s2.loli.net/2025/06/11/EwbkMvctjm5DHpO.png" alt="南京大学开甲书院院徽" loading="lazy">
+              <div>
+                <h3>开甲书院院徽</h3>
+                <p>我设计了南京大学开甲书院的院徽，开甲书院是南京大学计算机学科的新生学院。</p>
+              </div>
+            </article>
+          </div>
+        </section>
 
-    const iframe = document.querySelector('#comments > section.giscus > iframe')
-    if (iframe) {
-      // This works after giscus loaded.
-      const src = iframe.src
-      const newSrc = src.replace(/theme=[\w]+/, `theme=${theme}`)
-      iframe.src = newSrc
-    }
-  }
+      </div>
+    </main>
 
-  const switchTheme = () => {
-    // light -> dark -> auto -> light -> ...
-    const currentTheme = document.documentElement.getAttribute('data-theme')
-    let newTheme;
-    switch (currentTheme) {
-      case 'light':
-        newTheme = 'dark'
-        break
-      case 'dark':
-        newTheme = 'auto'
-        break
-      default:
-        newTheme = 'light'
-    }
-    applyTheme(newTheme)
-    window.localStorage.setItem('Stellar.theme', newTheme)
-
-    const messages = {
-      light: `Switched to Light Mode`,
-      dark: `Switched to Dark Mode`,
-      auto: `Switched to Auto Mode`,
-    }
-    hud?.toast?.(messages[newTheme])
-  }
-
-  (() => {
-    // Apply user's preferred theme, if any.
-    const theme = window.localStorage.getItem('Stellar.theme')
-    if (theme !== null) {
-      applyTheme(theme)
-    }
-  })()
-</script>
-
-
-<!-- optional -->
-
-
-
-<script defer>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.services = Object.assign({}, JSON.parse(`{"mdrender":{"js":"/js/services/mdrender.js"},"siteinfo":{"js":"/js/services/siteinfo.js","api":null},"ghinfo":{"js":"/js/services/ghinfo.js"},"sites":{"js":"/js/services/sites.js"},"friends":{"js":"/js/services/friends.js"},"timeline":{"js":"/js/services/timeline.js"},"fcircle":{"js":"/js/services/fcircle.js"},"weibo":{"js":"/js/services/weibo.js"},"memos":{"js":"/js/services/memos.js"},"twikoo":{"js":"/js/services/twikoo_latest_comment.js"},"waline":{"js":"/js/services/waline_latest_comment.js"},"artalk":{"js":"/js/services/artalk_latest_comment.js"},"giscus":{"js":"/js/services/giscus_latest_comment.js"}}`));
-    for (let id of Object.keys(ctx.services)) {
-      const js = ctx.services[id].js;
-      if (id == 'siteinfo') {
-        ctx.cardlinks = document.querySelectorAll('a.link-card[cardlink]');
-        if (ctx.cardlinks?.length > 0) {
-          utils.js(js, { defer: true }).then(function () {
-            setCardLink(ctx.cardlinks);
-          });
-        }
-      } else {
-        const els = document.getElementsByClassName(`ds-${id}`);
-        if (els?.length > 0) {
-          utils.jq(() => {
-            if (id == 'timeline' || 'memos' || 'marked') {
-              utils.js(deps.marked).then(function () {
-                utils.js(js, { defer: true });
-              });
-            } else {
-              utils.js(js, { defer: true });
-            }
-          });
-        }
-      }
-    }
-  });
-</script>
-
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    ctx.search = {
-      path: `/search.json`,
-    }
-    utils.js('/js/search/local-search.js', { defer: true });
-  });
-</script><script>
-  window.FPConfig = {
-    delay: 0,
-    ignoreKeywords: [],
-    maxRPS: 5,
-    hoverDelay: 25
-  };
-</script>
-<script defer src="https://cdn.jsdelivr.net/npm/flying-pages@2/flying-pages.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@19.1.3/dist/lazyload.min.js"></script>
-<script>
-  // https://www.npmjs.com/package/vanilla-lazyload
-  // Set the options globally
-  // to make LazyLoad self-initialize
-  window.lazyLoadOptions = {
-    elements_selector: ".lazy",
-  };
-  // Listen to the initialization event
-  // and get the instance of LazyLoad
-  window.addEventListener(
-    "LazyLoad::Initialized",
-    function (event) {
-      window.lazyLoadInstance = event.detail.instance;
-    },
-    false
-  );
-  document.addEventListener('DOMContentLoaded', function () {
-    window.lazyLoadInstance?.update();
-  });
-</script><script>
-  ctx.fancybox = {
-    selector: `.timenode p>img`,
-    css: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css`,
-    js: `https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js`
-  };
-  var selector = '[data-fancybox]:not(.error)';
-  if (ctx.fancybox.selector) {
-    selector += `, ${ctx.fancybox.selector}`
-  }
-  var needFancybox = document.querySelectorAll(selector).length !== 0;
-  if (!needFancybox) {
-    const els = document.getElementsByClassName('ds-memos');
-    if (els != undefined && els.length > 0) {
-      needFancybox = true;
-    }
-  }
-  if (needFancybox) {
-    utils.css(ctx.fancybox.css);
-    utils.js(ctx.fancybox.js, { defer: true }).then(function () {
-      Fancybox.bind(selector, {
-        hideScrollbar: false,
-        Thumbs: {
-          autoStart: false,
-        },
-        caption: (fancybox, slide) => {
-          return slide.triggerEl.alt || slide.triggerEl.dataset.caption || null
-        }
-      });
-    })
-  }
-</script>
-<script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    const swiper_api = document.getElementById('swiper-api');
-    if (swiper_api != undefined) {
-      utils.css(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.css`);
-      utils.js(`https://unpkg.com/swiper@10.3.1/swiper-bundle.min.js`, { defer: true }).then(function () {
-        const effect = swiper_api.getAttribute('effect') || '';
-        var swiper = new Swiper('.swiper#swiper-api', {
-          slidesPerView: 'auto',
-          spaceBetween: 8,
-          centeredSlides: true,
-          effect: effect,
-          rewind: true,
-          pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-          },
-          navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
-          },
-        });
-      })
-    }
-  });
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    window.codeElements = document.querySelectorAll('.code');
-    if (window.codeElements.length > 0) {
-      ctx.copycode = {
-        default_text: `Copy`,
-        success_text: `Copied`,
-        toast: `复制成功`,
-      };
-      utils.js('/js/plugins/copycode.js');
-    }
-  });
-</script>
-
-
-<!-- inject -->
-
-</div></body></html>
+    <script src="script.js"></script>
+  </body>
+</html>
